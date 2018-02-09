@@ -1,3 +1,3 @@
 class Post < ActiveRecord::Base
-  belong_to :author
+  belongs_to :author
 end
