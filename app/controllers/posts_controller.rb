@@ -33,14 +33,14 @@ class PostController < ApplicationController
   patch '/posts/:id' do
     @post = Post.find(params[:id])
     @post.update(params[:post])
-    # binding.pry
+
     redirect "/posts/#{@post.id}"
   end
 
   delete '/posts/:id' do
     @post = Post.find(params[:id])
     @post.destroy
-    binding.pry
+
     redirect '/posts'
   end
 
