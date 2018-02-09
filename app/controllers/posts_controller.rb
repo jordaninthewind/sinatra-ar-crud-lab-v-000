@@ -40,7 +40,7 @@ class PostController < ApplicationController
   delete '/posts/:id' do
     @post = Post.find(params[:id])
     @post.destroy
-
+    binding.pry
     redirect '/posts'
   end
 
