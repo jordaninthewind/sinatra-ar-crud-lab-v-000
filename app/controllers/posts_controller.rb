@@ -19,8 +19,8 @@ class PostController < ApplicationController
   end
 
   get '/posts/:id' do
-    binding.pry
     @post = Post.find(params[:id])
+    
     erb :'/posts/show'
   end
 
