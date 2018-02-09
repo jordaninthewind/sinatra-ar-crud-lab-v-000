@@ -20,7 +20,7 @@ class PostController < ApplicationController
 
   get '/posts/:id' do
     @post = Post.find(params[:id])
-    
+
     erb :'/posts/show'
   end
 
@@ -33,7 +33,7 @@ class PostController < ApplicationController
   patch '/posts/:id' do
     @post = Post.find(params[:id])
     @post.update(params[:post])
-
+    binding.pry
     redirect "/posts/#{@post.id}"
   end
 
