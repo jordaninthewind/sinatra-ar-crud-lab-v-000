@@ -10,12 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180209201940) do
+ActiveRecord::Schema.define(version: 20180209221633) do
+
+  create_table "authors", force: :cascade do |t|
+    t.string "name"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "name"
     t.string "content"
-    t.string "author_name"
+    t.integer "author_id"
   end
 
 end
